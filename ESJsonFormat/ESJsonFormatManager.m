@@ -250,7 +250,7 @@
             result = [NSMutableString stringWithFormat:@"%@",[result substringToIndex:result.length-2]];
         }
         //append method content (objectClassInArray)
-        NSString *methodStr = [NSString stringWithFormat:@"\n+ (NSDictionary *)objectClassInArray{\n    return @{%@};\n}\n",result];
+        NSString *methodStr = [NSString stringWithFormat:@"\n+ (NSDictionary *)modelContainerPropertyGenericClass {\n    return @{%@};\n}\n",result];
         return methodStr;
     }
 }
@@ -333,3 +333,4 @@
 }
 
 @end
+
